@@ -19,15 +19,15 @@
             <form class="p-3 bg-slate-500 rounded-md flex flex-col gap-y-2">
                 <div>
                     <label for="categoryTitle" class="block mb-1">category title</label>
-                    <input type="text" id="categoryTitle" class="bg-transparent border border-white rounded-sm" />
+                    <input type="text" id="category-title" class="bg-transparent border border-white rounded-sm" />
                 </div>
                 <div>
                     <label for="categoryDescription" class="block mb-1">category description</label>
-                    <textarea type="text" id="categoryDescription" class="bg-transparent border border-white rounded-sm w-full" ></textarea>
+                    <textarea type="text" id="category-description" class="bg-transparent border border-white rounded-sm w-full" ></textarea>
                 </div>
                 <div class="flex justify-between items-center gap-4">
-                    <buton class="bg-slate-900 px-2 py-1 flex-1 flex justify-center items-center rounded-sm">cancel</buton>
-                    <button class="bg-transparent border px-2 py-1 flex justify-center items-center rounded-sm flex-1">Add category</button> 
+                    <buton  class="bg-slate-900 px-2 py-1 flex-1 flex justify-center items-center rounded-sm">cancel</buton>
+                    <button id="add-new-category" class="bg-transparent border px-2 py-1 flex justify-center items-center rounded-sm flex-1">Add category</button> 
                 </div>
             </form>
         </div>
@@ -35,16 +35,20 @@
             <h1 class="mb-2">product section</h1>
             <form class="p-3 bg-slate-500 rounded-md flex flex-col gap-y-2">
                 <div>
-                    <label for="productTitle" class="block mb-1">category title</label>
+                    <label for="productTitle" class="block mb-1">product title</label>
                     <input type="text" id="productTitle" class="bg-transparent border border-white rounded-sm" />
                 </div>
                 <div>
-                    <label for="productNumber" class="block mb-1">category title</label>
+                    <label for="productNumber" class="block mb-1">product quantity</label>
                     <input type="text" id="productNumber" class="bg-transparent border border-white rounded-sm" />
                 </div>
                 <div>
-                    <label for="categoryTitle" class="block mb-1">category title</label>
-                    <input type="text" id="categoryTitle" class="bg-transparent border border-white rounded-sm" />
+                    <label for="categoryTitle" class="block mb-1">product category</label>
+                    <select class="bg-transparent w-full border-white rounded-sm">
+                        <option value="frontend" class="bg-slate-800 ">Front End</option>
+                        <option value="backend" class="bg-slate-800">Back End</option>
+                        <option value="fullstack" class="bg-slate-800">Full Stack</option>
+                    </select>
                 </div>
                 <div class="flex justify-between items-center gap-4">
                     <buton class="bg-slate-900 px-2 py-1 flex-1 flex justify-center items-center rounded-sm">cancel</buton>

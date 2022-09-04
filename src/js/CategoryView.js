@@ -1,18 +1,21 @@
 import Storage from "./Storage.js";
 //get the tags that related to category section and we wnat to add events to them and is exist in on initial loading
-
 //input for title in category form
 const titleInput=document.querySelector("#category-title");
 //input for description in category form
 const descriptionInput=document.querySelector("#category-description");
 //Add category button in category form
 const addNewCategoryBtn=document.querySelector("#add-new-category");
+
+
+
  class CategoryView{
-    constructor(){
+    constructor(a){
         //one of the things that you should put in constructor method is events for initils tags
         //event for click on Add category button
         addNewCategoryBtn.addEventListener("click",(e)=>this.addNewCategory(e));
         this.categories=[];
+        this.a=a
     };
     //when click on add category button you make a new category object in DB and again get the updated
     //data and show them in App(by )
@@ -32,7 +35,7 @@ const addNewCategoryBtn=document.querySelector("#add-new-category");
         titleInput.value='';
         descriptionInput.value='';
     };
-    //update the variable input in costructor
+    //update the variable(this.categories) in costructor
     setApp(){
         this.categories=Storage.getAllCategories();
     };

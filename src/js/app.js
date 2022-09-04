@@ -1,2 +1,9 @@
 import CategoryView from "./CategoryView.js";
-new CategoryView();
+document.addEventListener("DOMContentLoaded",()=>{
+   // when app loaded, fill the initial variable(this.categoryList) with category table data, in DB 
+    CategoryView.setApp();
+    //make the option in product category in prodcut form section
+    CategoryView.createCategoriesList();
+    console.log(CategoryView.categories)
+});
+console.log(CategoryView.categories)

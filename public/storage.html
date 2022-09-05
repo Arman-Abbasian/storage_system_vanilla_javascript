@@ -31,6 +31,7 @@
                 </div>
             </form>
         </div>
+        <!-- product section -->
         <div>
             <h1 class="mb-2">product section</h1>
             <form class="p-3 bg-slate-500 rounded-md flex flex-col gap-y-2">
@@ -40,31 +41,20 @@
                 </div>
                 <div>
                     <label for="productNumber" class="block mb-1">product quantity</label>
-                    <input type="text" id="productNumber" class="bg-transparent border border-white rounded-sm" />
+                    <input type="number" id="productNumber" class="bg-transparent border border-white rounded-sm" />
                 </div>
                 <div>
-                    <label for="categoryTitle" class="block mb-1">product category</label>
-                    <select id="product-category" class="bg-transparent w-full border-white rounded-sm">
-                        <option value="frontend" class="bg-slate-800 ">Front End</option>
-                        <option value="backend" class="bg-slate-800">Back End</option>
-                        <option value="fullstack" class="bg-slate-800">Full Stack</option>
+                    <label for="productCategoty" class="block mb-1">product category</label>
+                    <select id="productCategoty" class="bg-transparent w-full border-white rounded-sm">
                     </select>
                 </div>
                 <div class="flex justify-between items-center gap-4">
                     <buton class="bg-slate-900 px-2 py-1 flex-1 flex justify-center items-center rounded-sm">cancel</buton>
-                    <button class="bg-transparent border px-2 py-1 flex justify-center items-center rounded-sm flex-1">Add category</button> 
+                    <button id="add-new-product" class="bg-transparent border px-2 py-1 flex justify-center items-center rounded-sm flex-1">Add product</button> 
                 </div>
             </form>
         </div>
-        <div class="flex justify-between items-center">
-            <p>cover 405</p>
-            <div class="flex justify-between items-center">
-                <span class="block w-16 h-7  rounded-full border border-white"></span>
-                <span class="block w-16 h-7  rounded-full border border-white"></span>
-                <span class="block w-16 h-7  rounded-full border border-white"></span>
-                <span class="block w-16 h-7  rounded-full border border-white"></span>
-            </div>
-        </div>
+        <div id="productsSection" class="flex flex-col gap-y-3"></div>
     </main>
 
 

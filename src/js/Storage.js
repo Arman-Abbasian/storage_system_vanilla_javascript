@@ -47,7 +47,7 @@ export default class Storage{
             productToSave.createdAt=new Date().toISOString();
             savedProducts.push(productToSave)
         }
-        localStorage.setItem("category",JSON.stringify(savedProducts))
+        localStorage.setItem("products",JSON.stringify(savedProducts))
     }
 
 

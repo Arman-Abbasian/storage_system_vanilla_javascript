@@ -6,6 +6,8 @@ const titleInput=document.querySelector("#category-title");
 const descriptionInput=document.querySelector("#category-description");
 //Add category button in category form
 const addNewCategoryBtn=document.querySelector("#add-new-category");
+// category select in category form
+const categoryDom=document.getElementById("productCategoty");
 
 
 
@@ -44,8 +46,7 @@ const addNewCategoryBtn=document.querySelector("#add-new-category");
         let result=`<option value="" class="bg-slate-800">All</option>`;
         this.categories.forEach((item)=>{
             result+=`<option value=${item.id} class="bg-slate-800">${item.title}</option>`
-        });
-        const categoryDom=document.getElementById("product-category");
+        });  
         categoryDom.innerHTML=result;
     }
 };

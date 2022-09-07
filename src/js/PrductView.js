@@ -13,8 +13,9 @@ class ProductView{
         //one of the things that you should put in constructor method is events for initils tags
         //event for click on Add category button
         productAddInput.addEventListener("click",(e)=>this.addNewProduct(e));
-        searchProductInput.addEventListener("input",(e)=>console.log(e.target.value))
+        searchProductInput.addEventListener("input",(e)=>this.searchProduct(e.target.value))
         this.products=[];
+        this.helperProducts=[];
     };
     addNewProduct(e){
         e.preventDefault();
@@ -36,13 +37,13 @@ class ProductView{
     };
     setProducts(){
         this.products=Storage.getAllProducts();
+        this.helperProducts=this.products
     };
     //make products in product container
     //this method run in two situation (1-when app first time loaded , 2- when click on Add product button)
-    createProductssList(products){
+    createProductssList(){
         let result="";
-        console.log(Storage.getAllCategories())
-        products.forEach((item)=>{
+        this.helperProducts.forEach((item)=>{
             console.log(item.productCategory)
           const findedCategory=Storage.getAllCategories().find(element=>{
                 return element.id==item.productCategory
@@ -61,6 +62,12 @@ class ProductView{
             `
         });
         productDom.innerHTML=result;
+    };
+
+
+    searchProduct(inputValue){
+        this.helperProducts= this.products.filter(item=>item.productTitle.includes(inputValue));
+        this.createProductssList();
     }
 };
 export default new ProductView();

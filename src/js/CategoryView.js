@@ -7,7 +7,7 @@ const descriptionInput=document.querySelector("#category-description");
 //Add category button in category form
 const addNewCategoryBtn=document.querySelector("#add-new-category");
 // category select in category form
-const categoryDom=document.getElementById("productCategoty");
+const categoryDomInproductSection=document.getElementById("productCategoty");
 
 
 
@@ -17,7 +17,6 @@ const categoryDom=document.getElementById("productCategoty");
         //event for click on Add category button
         addNewCategoryBtn.addEventListener("click",(e)=>this.addNewCategory(e));
         this.categories=[];
-        this.a=a
     };
     //when click on add category button you make a new category object in DB and again get the updated
     //data and show them in App(by )
@@ -47,7 +46,7 @@ const categoryDom=document.getElementById("productCategoty");
         this.categories.forEach((item)=>{
             result+=`<option value=${item.id} class="bg-slate-800">${item.title}</option>`
         });  
-        categoryDom.innerHTML=result;
+        categoryDomInproductSection.innerHTML=result;
     }
 };
 export default new CategoryView();

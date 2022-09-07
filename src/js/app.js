@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     // when app loaded, fill the initial variable(this.productList) with product table data, in DB 
     ProductView.setProducts();
      //make the products in product container
-    ProductView.createProductssList();
+    ProductView.createProductssList(ProductView.products);
 
 });

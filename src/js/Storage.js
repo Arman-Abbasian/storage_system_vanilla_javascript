@@ -27,13 +27,19 @@ export default class Storage{
         }
         localStorage.setItem("category",JSON.stringify(savedCategories))
     };
-    static getAllProducts(){
+    static getAllProducts(sort="newest"){
         //here we have two DB one for products and an other for the categories
         const savedProducts=JSON.parse(localStorage.getItem('products')) || [];
-        const sortedProducts=savedProducts.sort((a,b)=>{
-            return new Date(a.createdAt) > new Date(b.createdAt)? -1:1
+       if(sort==="newest"){
+        return savedProducts.sort((a,b)=>{
+            return new Date(a.createdAt) > new Date(b.createdAt)? -1:1;
+            
         });
-        return sortedProducts;
+       }else if(sort==="oldest"){
+        return savedProducts.sort((a,b)=>{
+            return new Date(a.createdAt) > new Date(b.createdAt)? 1:-1
+        });
+       }
     };
     static savedProducts(productToSave){
         const savedProducts=Storage.getAllProducts();
